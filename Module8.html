@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module7</title>
+    
+</head>
+<body>
+    <h2 align=center>Module 8</h2>
+    <p>To get a new character no</p>
+    <button id="myBtn">Click Here</button>
+
+<p id="demo"></p>
+<p id="name"></p>
+
+<script>
+    
+    document.getElementById("myBtn").addEventListener("click", randomNo);
+    function randomNo(){
+        
+        document.getElementById("demo").innerHTML =Math.ceil(Math.random()*25);
+    }
+    const randomNo1=Math.ceil(Math.random()*25);
+   fetch(`https://swapi.dev/api/people/${randomNo1}/`)
+   .then(response=>response.json())
+   .then(data=>{
+       console.log(data)
+    
+   })
+  
+   
+   
+
+   
+</script>    
+</body>
+</html>
